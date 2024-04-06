@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Ankit Ghosh</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/all.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#publication">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Student</p>
+                    <h1>Hi, I'm Ankit from IIT Bombay</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-------- about -------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="images/about_me.jpg">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="sub-title">About me</h1>
+                        <p>I don't completely know about myself. If oneday I get to know completely, I will definitely write. Till then, I'm just "a solution, in search of its driving equation".</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('interest')">Research interest</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Languages</span><br>Python, CSS, HTML</li>
+                                <li><span>Softwares</span><br>Gaussview, Molden, Avogadro, Shelxtl, PyMol</li>
+                                <li><span>Operating systems</span><br>Windows, Linux</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021 - 2022</span><br>Masters Project</li>
+                                <li><span>2022 - Current</span><br>Doctoral Project</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Intermediate/+2</span><br>Katwa Kashiram Das Institution<br>(2015 - 2017)</li>
+                                <li><span>B.Sc.</span><br>Ramakrishna Mission Vidyamandira, Belur Math<br>(2017 - 2020)</li>
+                                <li><span>M.Sc.</span><br>Indian Institute of Technology Bombay<br>(2020 - 2022)</li>
+                                <li><span>Ph.D.</span><br>Indian Institute of Technology Bombay<br>(2022 - Current)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="interest">
+                            <ul>
+                                <li><span>Deep learning</span></li>
+                                <li><span>Chirality</span></li>
+                                <li><span>Data distribution</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------ research------- -->
+        <div id="publication">
+            <div class="container">
+                <h1 class="sub-title">Publications</h1>
+                <div class="publists">
+                    <ul>
+                        <li>
+                            <a href="https://doi.org/10.1002/jcc.27315" target="_blank">
+                            <p>Das, M., Ghosh, A. and Sunoj, R.B., Advances in machine learning with chemical language models in molecular property and reaction outcome predictions. 
+                            <br><em>J. Comput. Chem. </em><b>2024</b>,1–17.</p></a>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-------- contact -------- -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>ankitghosh@iitb.ac.in</p>
+                        <div class="social-icons">
+                            <a href=""></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>
+                        Copyright 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>
