@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', serif;
     box-sizing: border-box;
 }
 html{
@@ -47,7 +47,7 @@ nav ul li a::after{
    content: '';
    width: 0;
    height: 3px;
-   background: #90ee90;
+   background: #3cb371;
    position: absolute;
    left: 0;
    bottom: -6px;
@@ -62,8 +62,8 @@ nav ul li a:hover::after{
     font-size: 30px;
 }
 .header-text h1{
-    margin-top: 20px;
-    font-size: 40px; 
+    font-size: 60px;
+    margin-top: 20px; 
 }
 
 /*-------about-------- */
@@ -106,7 +106,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #90ee90;
+    background: #3cb371;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -138,23 +138,13 @@ nav ul li a:hover::after{
     display: block;
     margin-left: 0;
 }
-
-.publication-head{
-    font-size: 60px;
-    font-weight: 600;
-    margin-left: 0;
-    color: #fff;
-}
-
 .publists ul li{
     list-style: square;
     margin: 10px 0;
-    color: #fff;
-    font-size: 20px;
 }
 .publists ul li a{
     text-decoration: none;
-    color: #fff;
+    color: #ababab;
     cursor: pointer;
     transition: color 0.5s;
 }
@@ -164,20 +154,6 @@ nav ul li a:hover::after{
 }
 
 /* ------contact----- */
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #90ee90;
-    padding: 14px 40px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-}
-.btn:hover{
-    background: #90ee90;
-}
 .contact-left{
     flex-basis: 35%;
 }
@@ -188,7 +164,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #90ee90;
+    color: #3cb371;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -204,12 +180,32 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #90ee90;
+    color: #3cb371;
     transform: translateY(-5px);
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #3cb371;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #3cb371;
+}
+form .btn2{
+    padding: 14px 40px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 .btn.btn2{
     display: inline-block;
-    background: #90ee90;
+    background: #3cb371;
 }
 .contact-right form{
     width: 100%;
@@ -225,12 +221,6 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 6px;
 }
-form .btn2{
-    padding: 14px 40px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
 .copyright{
     padding: 25px 0;
     width: 100%;
@@ -240,14 +230,14 @@ form .btn2{
     margin-top: 20px;
 }
 
-/* ------- css for small screen -------*/
+/* ------- css for small screens -------*/
 nav .fas{
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 992px){
     #header{
-        background-image: none;
+        background-image: url(images/mobile_bg.jpg);
     }
     .header-text{
         margin-top: 100%;
@@ -261,7 +251,7 @@ nav .fas{
         font-size: 25px;
     }
     nav ul{
-        background: #90ee90;
+        background: #3cb371;
         position: fixed;
         top: 0;
         right: -200px;
@@ -298,7 +288,7 @@ nav .fas{
         margin-right: 20px;
     }
     .publists{
-        font-size: 14px;
+        font-size: 16px;
     }
     .contact-left, .contact-right{
         flex-basis: 100%;
